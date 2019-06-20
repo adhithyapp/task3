@@ -1,0 +1,39 @@
+<html>
+<body onload="myFunction()">
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+<br>FirstName <input type="text" onkeypress="myFunction1()"required></br>
+
+<script>
+function myFunction1() {
+  alert("You pressed a key inside the input field");
+}
+</script>
+<script>
+function myFunction2() {
+  alert("Input field lost focus.");
+}
+</script>
+
+<form reg action="/action_page.php" method="post">
+<br>Last Name<input type="text" name="lastname"required></br>
+ <br>AddressLine1<input type="text" id="myInput" onfocusin="focusFunction()" onfocusout="blurFunction()"required></br>
+
+<script>
+function focusFunction() {
+  document.getElementById("myInput").style.background = "yellow";
+}
+
+function blurFunction() {
+  document.getElementById("myInput").style.background = "red";
+}
+</script>
+
+<br>AddressLine2<input type="text" name="add2"required></br>
+<br> <input type="submit" value="ok"></br>
+</form>
+</body>
+</html>
